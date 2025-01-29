@@ -1,23 +1,33 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Setting = () => {
   const navigate = useNavigate();
 
   return (
     <div>
-      <button
-        onClick={() => navigate("/about/input")} // Absolute path
-        className="btn bg-green-700 text-white font-bold mt-10"
-      >
-        Input
-      </button>
-      <br />
-      <button
-        onClick={() => navigate("/about/massage")} // Absolute path
-        className="btn bg-green-900 text-white font-bold mt-10"
-      >
-        Massage
-      </button>
+      <div className="flex justify-center mt-10 gap-10">
+        <button
+          onClick={() => navigate("/about/input")}
+          className="btn bg-green-700 text-white font-bold  p-4 rounded-3xl"
+        >
+          Input
+        </button>
+        <br />
+        <button
+          onClick={() => navigate("/about/massage")}
+          className="btn bg-green-900 text-white font-bold p-4 rounded-3xl"
+        >
+          Massage
+        </button>
+
+        {/* <Link to={"/user"}>User</Link> */}
+        <button
+          className="btn bg-green-900 text-white font-bold  p-4 rounded-3xl"
+          onClick={() => navigate("/about/user")}
+        >
+          User
+        </button>
+      </div>
     </div>
   );
 };

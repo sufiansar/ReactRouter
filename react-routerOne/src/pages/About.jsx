@@ -3,16 +3,16 @@ import { Link, Outlet } from "react-router-dom";
 const About = () => {
   return (
     <div>
-      <h1>About page</h1>
-
-      <div className="bg-gray-400">
-        <Link to="profile" style={{ margin: "0 10px" }}>
+      <div className="flex justify-center gap-20 mt-20">
+        <Link className="bg-pink-500 p-3 rounded-2xl btn" to="profile">
           Profile
         </Link>
-        <Link to="settings" style={{ margin: "0 10px" }}>
+        <Link className="bg-pink-500 p-3 rounded-2xl btn" to="settings">
           Settings
         </Link>
-        <Link to="massage">Massage</Link>
+        <Link className="bg-pink-500 p-3 rounded-2xl btn" to="massage">
+          Massage
+        </Link>
       </div>
       <Outlet></Outlet>
     </div>

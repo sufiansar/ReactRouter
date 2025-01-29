@@ -52,6 +52,8 @@ import Setting from "./pages/Setting";
 import RootLayout from "./Layout/RootLayout";
 import MassagePage from "./pages/MassagePage";
 import InputPage from "./pages/InputPage";
+import User from "./pages/User";
+import DataLoader from "./pages/DataLoader";
 
 function App() {
   const router = createBrowserRouter(
@@ -60,10 +62,21 @@ function App() {
         <Route path="/" element={<>Home</>} />
         <Route path="/about" element={<About />}>
           <Route path="profile" element={<Profile />} />
-          <Route path="massage" element={<MassagePage />} />{" "}
-          {/* Nested under /about */}
-          <Route path="input" element={<InputPage />} />{" "}
-          {/* Nested under /about */}
+          <Route path="massage" element={<MassagePage />} />
+
+          <Route path="input" element={<InputPage />} />
+
+          <Route
+            loader={async () => {
+              const response = await fetch(
+                `https://jsonplaceholder.typicode.com/users`
+              );
+              return response.json();
+            }}
+            path="user"
+            element={<DataLoader />}
+          />
+
           <Route path="settings" element={<Setting />} />
         </Route>
         <Route path="/contact" element={<>Contact</>} />
