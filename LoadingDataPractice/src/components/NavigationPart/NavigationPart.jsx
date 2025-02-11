@@ -12,6 +12,12 @@ const NavigationPart = () => {
       <NavLink className="bg-purple-600 rounded-2xl p-3 mb-6" to={"/about"}>
         About
       </NavLink>
+      <NavLink className="bg-purple-600 rounded-2xl p-3 mb-6" to={"/inputpage"}>
+        InPutPage
+      </NavLink>
+      <NavLink className="bg-purple-600 rounded-2xl p-3 mb-6" to={"/posts"}>
+        Posts
+      </NavLink>
     </div>
   );
 };

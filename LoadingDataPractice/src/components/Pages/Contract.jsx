@@ -18,9 +18,11 @@ const Contract = () => {
             serves as a declaration of Sufiyan’s dedication to his goals and
             future opportunities. Signed by: Sufiyan Date: [Insert Date]
           </p>
-          <NavLink to={"inputpage"}>Next Page</NavLink>
         </div>
+        <NavLink to={"inputpage"}>Next Page</NavLink>
       </div>
+
+      <Outlet />
     </div>
   );
 };
