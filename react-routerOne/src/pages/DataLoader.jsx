@@ -5,7 +5,7 @@ const DataLoader = () => {
   const users = useLoaderData();
   return (
     <div>
-      <div>
+      <div className="grid grid-cols-3 mx-auto">
         {users.map((userH) => (
           <User key={userH.id} useral={userH}></User>
         ))}

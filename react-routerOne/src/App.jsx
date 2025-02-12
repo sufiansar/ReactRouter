@@ -54,12 +54,14 @@ import MassagePage from "./pages/MassagePage";
 import InputPage from "./pages/InputPage";
 import User from "./pages/User";
 import DataLoader from "./pages/DataLoader";
+import SingleUser from "./pages/SingleUser/SingleUser";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route path="/" element={<>Home</>} />
+        <Route path="/singleuser" element={<SingleUser />} />
         <Route path="/about" element={<About />}>
           <Route path="profile" element={<Profile />} />
           <Route path="massage" element={<MassagePage />} />

@@ -13,6 +13,9 @@ const About = () => {
         <Link className="bg-pink-500 p-3 rounded-2xl btn" to="massage">
           Massage
         </Link>
+        <Link className="bg-pink-500 p-3 rounded-2xl btn" to="singleuser">
+          SingleUser
+        </Link>
       </div>
       <Outlet></Outlet>
     </div>
